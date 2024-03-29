@@ -4,10 +4,17 @@
     <!--Cabeçalho do site = Orientações-->
         <meta charset="UTF-8"/>
         <link rel="stylesheet" type="text/css" href="../CSS/estilo.css"/>
+        <script type=text/javascript src="../javascript/funcoes.js">
+            function coletar(){
+                alert("Entrei");
+            }
+        </script> 
         <title>Página Inicial</title> <!--Titulo da aba-->
     </head> <!--fim do cabeçalho-->
 
-    <body> <!-- Corpo do site = Conteúdo-->   
+    <body> <!-- Corpo do site = Conteúdo--> 
+ 
+
         <header id="cabecalho">  <!--Cabeçalho da Pagina-->
        <!--Menu de Navegação-->
             <nav>
@@ -69,6 +76,55 @@
             <h5>Para mais informações: </h5>
             <p>11 99999-9999</p>
         </section>
+
+        <section id="formulario">
+            <h2>Formulário de Cadastro</h2>
+            <form>
+                <label id="nome">Nome: </label><br>
+                <input type="text" id="tNome" placeholder="Nome Completo"><br>
+
+
+                <label id="telefone">Telefone</label><br>
+                <input type="text" id="tTelefone" placeholder="(11) 91234-5678"><br>
+
+                <label id="dtNascimento">Data de Nascimento</label><br>
+                <input type="date" id="tDtNascimento">
+
+                <label id="endereco">Endereço: </label>
+                <input type="text" id="tEndereco" placeholder="Rua..."><br>
+                
+                    <input type="radio" name="situacao" id="solteiro" value="Solteiro">
+                    <label id="lSolteiro">Solteiro</label><br>
+
+                    <input type="radio" name="situacao" id="casado" value="Casado">
+                    <label id="lCasado">Casado</label><br>
+
+                    <input type="radio" name="situacao" id="divorciado" value="Divorciado">
+                    <label id="lDivorciado">Divorciado</label><br>
+
+                    <input type="radio" name="situacao" id="viuvo" value="Viuvo">
+                    <label id="lViuvo">Viuvo</label><br>
+
+                <input type="checkbox" name="profissao" id="pFisica" value="Pessoa Fisica">
+                <label id="tFisica">Pessoa Física</label>
+
+                <input type="checkbox" name="profissao" id="pJuridica" value="Pessoa Juridica"><br>
+                <label id="tJuridica">Pessoa Jurídica</label>
+
+                <label id="lTrabalhando">Você está Trabalhando?</label>
+                <select id="trabalhando" name="trabalho">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select><br>             
+            </form>
+
+            <button type="submit" onclick="coletar()">Cadastrar</button><br><br>
+
+            <label id="lResultado">Resultado: </label>
+                <textArea id="resultado" rows="30" cols="15" readonly></textArea>
+        </section>
+
+
         <footer id="rodape">
             <h5>Desenvolvido por Fernanda Perialdo Alves</h5>
         </footer>

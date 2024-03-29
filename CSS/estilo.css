@@ -93,6 +93,12 @@ ul{
     
 }
 
+#formulario{
+    text-align: center;
+    background-color: rgb(196, 139, 139);
+    border: 10px;
+}
+
 /*Página Catálogo*/
 
 #tituloCatalogo{
